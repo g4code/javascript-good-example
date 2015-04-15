@@ -1,0 +1,19 @@
+{
+  "name": "good",
+  "version": "0.0.0",
+  "authors": [],
+  "directory": "public/bower",
+  "description": "good example",
+  "license": "MIT",
+  "dependencies": {
+    "evento": "*",
+    "jquery": "~2.1.1",
+    "bootstrap": "3.3.4",
+    "requirejs": "~2.1.15",
+    "text": "requirejs/text#~2.0.13",
+    "twig.js": "~0.7.2",
+    "g4.http.js": "~0.0.1",
+    "localstorage.js": "*",
+    "jsmapper": "~0.0.4"
+  }
+}

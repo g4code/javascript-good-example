@@ -1,0 +1,26 @@
+<div class="panel panel-default">
+	<div id="js_add_task" class="btn btn-default">Add task</div>
+	<table class="table">
+		<thead>
+			<tr>
+			<th>task_id</th>
+			<th>Subject</th>
+			<th>Text</th>
+			<th>User</th>
+			<th><a href="#/new"><i class="icon-plus-sign"></i></a></th>
+			</tr>
+		</thead>
+		<tbody id="tasks_list">
+			{% for task in tasks %}
+			<tr>
+				<td><a>{{ task.task_id }}</a></td>
+				<td>{{ task.subject }}</td>
+				<td>{{ task.text }}</td>
+				<td>{{ task.user.first_name }} {{ task.user.last_name }} </td>
+				<td><a class="js_task_edit" data-task-id="{{ task.task_id }}"><i class="glyphicon glyphicon-pencil"></i></a></td>
+				<td><a class="js_task_delete" data-task-id="{{ task.task_id }}"><i class="glyphicon glyphicon-remove"></i></a></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
