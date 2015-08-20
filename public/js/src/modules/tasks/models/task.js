@@ -48,7 +48,7 @@ function(Sandbox, Evento, TasksMapper, View){
 
 		update: function(task)
 		{
-			debugger;
+			new TasksMapper("localCollection").updateCollection(task);
 		},
 
 		showForm: function()

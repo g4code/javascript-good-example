@@ -14,6 +14,6 @@
     "twig.js": "~0.7.2",
     "g4.http.js": "~0.0.1",
     "localstorage.js": "*",
-    "jsmapper": "~0.0.7"
+    "jsmapper": "0.0.10"
   }
 }

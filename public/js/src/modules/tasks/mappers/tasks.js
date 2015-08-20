@@ -14,6 +14,19 @@ function(Sandbox, Mapper){
         getIdentIdentifier: function(task)
         {
             return task.task_id;
+        },
+
+        updateCollection: function(task)
+        {
+            var tasks = this.get();
+
+            for (i=0; i<tasks.length; i++) {
+                if(tasks[i].task_id == task.task_id){
+                    tasks[i] = task;
+                }
+            }
+
+            this.post(tasks);
         }
 
     };
