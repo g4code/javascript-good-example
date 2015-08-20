@@ -1,4 +1,7 @@
-define(["jsmapper/mapper"], function(Mapper){
+define([
+    "sandbox",
+    "jsmapper/mapper"],
+function(Sandbox, Mapper){
 
     var Notifications = function(adapter) {
         this.adapter = adapter;
@@ -15,7 +18,7 @@ define(["jsmapper/mapper"], function(Mapper){
 
     };
 
-    $.extend(Notifications.prototype, new Mapper());
+    Sandbox.extend(Notifications.prototype, new Mapper());
 
     return Notifications;
 });

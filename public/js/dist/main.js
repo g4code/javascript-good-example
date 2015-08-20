@@ -1,9 +1,14 @@
 ;
 require.config(SiteConfig);
 
-require(["jquery", "modules/tasks/runner"], function($, Tasks) {
+require([
+    "jquery",
+    "modules/tasks/runner"],
+function($, Tasks) {
 
     $(function(){
-        new Tasks();
+
+        new Tasks().run();
+
     });
 });

@@ -1,7 +1,7 @@
 ;(function() {
 
     var config = {
-        baseUrl: '/public/js/scripts',
+        baseUrl: '/public/js/src',
         paths: {
             jquery: "../../bower/jquery/dist/jquery",
             templates:"../../templates",

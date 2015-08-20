@@ -1,5 +1,8 @@
-define(["modules/tasks/mappers/tasks", "modules/tasks/views/tasks-list"
-	],function(TasksMapper, View){
+define([
+    "sandbox",
+	"modules/tasks/mappers/tasks",
+    "modules/tasks/views/tasks-list"],
+function(Sandbox, TasksMapper, View){
 
 	var Tasks = function(){
 		this.hasLocal() ?
