@@ -3,11 +3,11 @@ define([
     "jsmapper/mapper"],
 function(Sandbox, Mapper){
 
-    var Notifications = function(adapter) {
+    var Tasks = function(adapter) {
         this.adapter = adapter;
     };
 
-    Notifications.prototype = {
+    Tasks.prototype = {
 
         resourceName: "/tasks/data.json",
 
@@ -31,7 +31,7 @@ function(Sandbox, Mapper){
 
     };
 
-    Sandbox.extend(Notifications.prototype, new Mapper());
+    Sandbox.extend(Tasks.prototype, new Mapper());
 
-    return Notifications;
+    return Tasks;
 });

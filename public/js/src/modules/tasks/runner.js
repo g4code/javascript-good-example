@@ -1,10 +1,9 @@
 define([
     "sandbox",
     "evento",
-	"modules/tasks/mappers/tasks",
 	"modules/tasks/models/show-tasks",
     "modules/tasks/models/task"
-],function(Sandbox, Evento, TasksMapper, ShowTasks, Task){
+],function(Sandbox, Evento, ShowTasks, Task){
 
     var Runner = function(){};
 
@@ -26,7 +25,7 @@ define([
         run: function()
         {
             this.listen();
-            new ShowTasks();
+            this.render();
             return this;
         },
 
@@ -53,11 +52,14 @@ define([
                 new Task().save(new Task().currentTask());
             });
 
-            Evento.on("TASKS_LIST|SHOW", function(){
-                new ShowTasks();
-            });
+            Evento.on("TASKS_LIST|SHOW", $.proxy(this.renderTasks, this));
 
             return this;
+        },
+
+        render: function()
+        {
+            new ShowTasks();
         }
 
     };
