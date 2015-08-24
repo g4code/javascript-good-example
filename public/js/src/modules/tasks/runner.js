@@ -52,7 +52,7 @@ define([
                 new Task().save(new Task().currentTask());
             });
 
-            Evento.on("TASKS_LIST|SHOW", $.proxy(this.renderTasks, this));
+            Evento.on("TASKS_LIST|SHOW", $.proxy(this.render, this));
 
             return this;
         },
